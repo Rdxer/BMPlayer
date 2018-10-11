@@ -328,7 +328,7 @@ open class BMPlayer: UIView {
         delegate?.bmPlayer(player: self, playerOrientChanged: isFullScreen)
     }
     
-    @objc func fullScreenButtonPressed() {
+    @objc public func fullScreenButtonPressed() {
         controlView.updateUI(!self.isFullScreen)
         if isFullScreen {
             UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
